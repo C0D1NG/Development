@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator by Sayed Mannan Ahmad</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div class="header"><h1>Calculator by Sayed Mannan</h1></div>
+    <div class="bgc"></div>
+    <div class="container">
+       <form>
+        <input id="textview" readonly>
+        <table>
+           <tr>
+               <td><input class="button" type="button" value="C" onclick="clearValue();"></td>
+               <td><input class="button" type="button" value="<" onclick="back();"></td>
+               <td><input class="button" type="button" value="/" onclick="insertNum('/');"></td>
+               <td><input class="button" type="button" value="x" onclick="insertNum('*');"></td>
+           </tr>
+           <tr>
+               <td><input class="button" type="button" value="7" onclick="insertNum(7);"></td>
+               <td><input class="button" type="button" value="8" onclick="insertNum(8);"></td>
+               <td><input class="button" type="button" value="9" onclick="insertNum(9);"></td>
+               <td><input class="button" type="button" value="-" onclick="insertNum('-');"></td>
+           </tr>
+           <tr>
+               <td><input class="button" type="button" value="4" onclick="insertNum(4);"></td>
+               <td><input class="button" type="button" value="5" onclick="insertNum(5);"></td>
+               <td><input class="button" type="button" value="6" onclick="insertNum(6);"></td>
+               <td><input class="button" type="button" value="+" onclick="insertNum('+');"></td>
+           </tr>
+           <tr>
+               <td><input class="button" type="button" value="1" onclick="insertNum(1);"></td>
+               <td><input class="button" type="button" value="2" onclick="insertNum(2);"></td>
+               <td><input class="button" type="button" value="3" onclick="insertNum(3);"></td>
+               <td rowspan="2"><input style="height: 108px;" class="button" type="button" value="=" onclick="finalResult();"></td>
+           </tr>
+
+           <tr>
+                <td colspan="2"><input style="width: 125px;" class="button" type="button" value="0" onclick="insertNum(0);"></td>
+                <td><input class="button" type="button" value="." onclick="insertNum('.');"></td>
+            </tr>
+        </table>
+        </form> 
+    </div>
+</body>
+</html>
