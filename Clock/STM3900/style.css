@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: #6290C8;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.contAll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 80vh;
+}
+
+.cont1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: flex-start;
+    width: 80%;
+}
+
+.timer div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.timer h3 {
+    font-family: 'Cutive Mono', monospace;
+    font-size: 130px;
+    margin: 0;
+    letter-spacing: -25px;
+    transition: 1s;
+    font-weight: normal;
+}
+
+.timerOut{
+    transition: 1s;
+    color: rgb(209, 42, 42);
+}
+
+.timer p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    margin: 0;
+    text-align: left;
+}
+
+.clignotement{
+    animation-name: clignotement;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes clignotement {
+    0% {
+        color: rgb(148, 24, 24);
+    }
+
+    50% {
+        color: rgb(218, 35, 35);
+    }
+
+    100% {
+        color: rgb(148, 24, 24);
+    }
+}
