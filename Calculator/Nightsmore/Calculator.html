@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html></html>
+<title>Calculator by Nightsmore</title> 
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    
+<p>Input:</p>
+<center>
+<input type="text" id="calculateInput" name="calculateInput" style="width: 500px; height: 100px; font-size: 50px;">
+
+<input type="button" onclick='calculate()' value="Calculate" style="width: 100px; height: 105px; "/></center>
+
+<p id="val" name='val'>val</p>
+
+
+<script>
+    function calculate()
+    {
+        x = document.getElementById('calculateInput');
+        y = document.getElementById('val');
+        
+        var newVal = x.value +'';
+        var converted = newVal.split(" ");
+
+        y.innerHTML = ""
+        y.innerHTML = "Output:" + (parseInt(converted[0]) + parseInt(converted[2]));     
+        
+
+        switch(converted[1].toString())
+        {
+            case "+":
+                y.innerHtml = "Output:" + (parseInt(converted[0]) + parseInt(converted[2]));    
+                break;
+            case "/": 
+                y.innerHTML = "Output:" + (parseInt(converted[0]) / parseInt(converted[2])); 
+                break;     
+            case "*": 
+                y.innerHTML = "Output:" + (parseInt(converted[0]) * parseInt(converted[2]));
+                break;      
+            case "-": 
+                y.innerHTML = "Output:" + (parseInt(converted[0]) - parseInt(converted[2]));
+                break;      
+            case "^": 
+                y.innerHTML = "Output:" + (parseInt(converted[0]) ^ parseInt(converted[2])) ;
+                break;         
+        }
+
+    }
+    
+</script> 
+
+</body>
+</html>
