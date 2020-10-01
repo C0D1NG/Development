@@ -1,0 +1,61 @@
+@media(orientation: portrait){
+    body{
+        font-size: 30px;
+    }
+}
+
+
+*{
+margin: 0;
+padding: 0;
+font-size: 1.8vw;
+}
+
+
+#main{
+    background-color: mediumaquamarine;
+    height: 102vh;
+}
+
+#title{
+    text-align: center;
+    color: white;
+}
+
+#caption{
+    text-align: center;
+    color: white;
+}
+
+#playArea{
+    height: 50vh;
+    border: 3px solid black;
+    margin: 3%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+i:hover{
+    color: white;
+    cursor: pointer;
+}
+
+#you{
+    color: white;
+}
+
+#computer{
+    color: white;
+}
+
+#score{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#reset{
+    display: flex;
+    justify-content: center;
+}
