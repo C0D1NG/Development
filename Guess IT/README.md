@@ -7,7 +7,7 @@ Fruit guessing game using Python
 
 1)Clone the repo.
 
-2)Run main.py
+2)Run main guess.py
 
 3)Make sure your microphone is working.
 
