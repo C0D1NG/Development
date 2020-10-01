@@ -78,11 +78,10 @@ span{
     background: #f38585;
     height: 40px;
     margin-left:20px;
-    float:right;
-    text-align: center;
+    float:right; 
     color:white;
     width:0;
-    display:inline-block;
+    text-align:center;
     transition:0.2s linear;
     opacity:0;
 }
