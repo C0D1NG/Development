@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0;'>
+    <title>Random Number Generator</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css'>
+
+</head>
+<body>
+
+<div class="ui container col">
+    <div class="col-left">
+        <div class="inner"></div>
+    </div>
+    <div class="col-right">
+        <div class="row">
+            <div class="icon input">
+							<!-- <label for="maxValue">Enter an upperBound for the random number </label> -->
+                <input type="number" id="maxValue" placeholder="Enter an upperBound for the random number "  required>
+                <!-- <i class="search icon js-submit"></i> -->
+            </div>
+
+            <div class="row right floated">
+                <button class="ui blue button btn-reset" onclick="generateRandom()">Generate Random Number</button>
+            </div>
+
+
+            <div>
+										<h2 id="random_number"></h2
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
