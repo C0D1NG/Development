@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* --------- READY BUTTON ------- */
+#ready {
+  width: 300px;
+  height: 125px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid white;
+  color: white;
+  font-size: 2rem;
+  background: black;
+  text-transform: uppercase;
+  z-index: 1;
+  transition: 0.2s;
+}
+
+#ready:hover {
+  background: white;
+  color: black;
+  border: white;
+}
+/* --------- READY BUTTON END --- */
+
+/* --------- HEADER ------------- */
+.header {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  margin: 0;
+  background: linear-gradient(to left, #904e95, #e96443, #904e95);
+}
+
+.header h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: white;
+  margin: 0 1em;
+}
+
+.score,
+.round,
+.timer {
+  width: 250px;
+  height: 50px;
+  background: black;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: 2px;
+}
+
+.menu-btn {
+  width: 125px;
+  height: 50px;
+  border: 2px solid white;
+  font-family: 'Roboto Mono', monospace;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 15px;
+  background: transparent;
+  position: absolute;
+  right: 15px;
+  transition: 0.2s;
+}
+
+.menu-btn:hover {
+  background: white;
+
+  color: #904e95;
+}
+
+.menu-btn:focus {
+  outline: none;
+}
+
+/* ---------- HEADER END ------------- */
+
+/* ---------- MENU ------------------- */
+
+.menu-container {
+  height: 50vh;
+  width: 50vw;
+  position: absolute;
+  padding: 1em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: black;
+  border: 5px solid white;
+  z-index: 10;
+}
+
+.menu-container ul {
+  padding: 0;
+  list-style: none;
+}
+
+.menu-container ul li {
+  padding: 0.75em 0;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.menu-container ul li:hover {
+  background: white;
+  color: black;
+}
+
+/* ---------- MENU END --------------- */
+
+.hidden {
+  display: none !important;
+}
+
+.winner,
+.next-game,
+.time-out {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+.button {
+  width: 200px;
+  height: 75px;
+  border: 2px solid white;
+  /* border-radius: 50%; */
+  text-transform: uppercase;
+  background: transparent;
+  color: white;
+  font-size: 1.5rem;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: white;
+  color: black;
+  outline: none;
+}
