@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(https://images.pexels.com/photos/796602/pexels-photo-796602.jpeg?cs=srgb&dl=three-white-ceramic-pots-with-green-leaf-plants-near-open-796602.jpg&fm=jpg);
+    background-size: cover;
+    background-position: center;
+    height: 90.8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 30px;
+}
+.nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 20px 0px;
+    text-align: center;
+    align-items: center;
+    background-color: teal;
+    padding: 3px 20px;
+    color: white;
+}
+.nav ul li{
+    margin: 10px 30px; 
+}
+.nav ul li a{
+    text-decoration: none;
+    color:black;
+    background-color: #66a103;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    }
+ .nav ul li a:hover{
+        background-color: #73b504;
+        transition: 0.5s;
+    
+        }
+        
+#task
+{
+    background-color: transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}        
+
+ #submit{
+    border-radius: 10px;
+    padding:3.5px 13px;
+    margin-top: 10px;
+    background-color:#66a103;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+ } 
+ #submit:hover{
+    background-color: #73b504;
+    cursor: pointer;
+    transition: 0.5s;
+ }
+
+ #submit:disabled{
+     background-color: transparent;
+     color: gray;
+ }      
+
+ #date{
+     background-color: transparent;
+     border-radius: 10px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+.all ul{
+    list-style: none;
+}
+.all ul li{
+    margin: 10px 0px;
+    padding: 10px 10px;
+    background: rgba(248, 109, 195, 0.7) ;
+    animation-name: hide;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    
+}
+.all ul li:nth-child(even){
+    background: rgba(116, 199, 247, 0.7);
+}
+.all ul li:hover{
+    background: rgba(248, 93, 189, 0.7) ;
+    transition: 0.1s;
+}
+.all ul li:nth-child(even):hover{
+    background: rgba(74, 183, 247, 0.7);
+    transition: 0.1s;
+}
+
+
+space{
+    margin-left:  20px ;
+}
+
+#del , #done {
+    float: right;
+    font-size: 2vh;
+    background-color: transparent;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+#del:hover , #done:hover{
+    background-color: white;
+    
+}
+#done{
+    margin-left: 50px;
+}
+@keyframes hide{
+    0%{
+        opacity: 1;
+        height: 100%;
+        line-height: 100%;
+        margin: 10px 0px;
+        padding: 10px 10px;
+    }
+    75%{
+        opacity: 0;
+        height: 50%;
+        line-height: 50%;
+        margin: 5px 0px;
+        padding: 5px 5px;
+    }
+    100%{
+        opacity: 0;
+        height: 0px;
+        line-height: 0px;
+        margin: 0px 0px;
+        padding: 0px 0px;
+    }
+}
