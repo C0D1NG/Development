@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        function insert(val) {
+            document.fm.in.value += val;
+        }
+        function equal() {
+            exp = document.fm.in.value;
+            if (exp)
+                document.fm.in.value = eval(exp);
+        }
+        function clr() {
+            document.fm.in.value = '';
+        }
+        function back() {
+            var exp = document.fm.in.value;
+            document.fm.in.value = exp.substring(0, exp.length-1);
+        }
+    </script>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            margin: 15px;
+            background: #091921;
+        }
+
+        h1 {
+            color: lime;
+            font-size: 50px;
+        }
+
+        .t1 {
+            box-sizing: border-box;
+            width: 60px;
+            height: 60px;
+        }
+
+        .table1 {
+            box-sizing: border-box;
+            background: #0c2835;
+            width: 240px;
+            height: 60px;
+        }
+
+        .table2 {
+            box-sizing: border-box;
+            border: 1px solid #024;
+            background: #0c2835;
+            width: 240px;
+            height: 240px;
+        }
+
+        tr {
+            box-sizing: border-box;
+            border: 1px solid #024;
+            text-align: center;
+            color: #fff;
+            background-color: #0c2835;
+            font-size: 25px;
+           
+        }
+
+        td {
+            box-sizing: border-box;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        td:active {
+            background: #98ff7e;
+        }
+
+        .inp {
+            box-sizing: border-box;
+            text-align: center;
+            border-radius: 25px;
+            width: 250px;
+            height: 60px;
+            color: #357;
+            font-size: 30px;
+        }
+
+        .e {
+            background: #03b1ff;
+        }
+
+        .c {
+            background: #ff3077;
+            box-sizing: border-box;
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Calculator</h1><br /><br /><hr /><br /><br />
+        <form name="fm">
+            <input class="inp" name="in" type="text" placeholder="G1"><br /><br /></input>
+            <table class="table1">
+                <tr>
+                    <td class="c" onclick="clr()">C</td>
+                    <td class="t1" onclick="insert('**')">^</td>
+                    <td class="t1" onclick="insert('%')">%</td>
+                    <td class="t1" onclick="back()">D</td>
+                </tr>
+            </table>
+            <table class="table2">
+                <tr>
+                    <td onclick="insert(7)">7</td>
+                    <td onclick="insert(8)">8</td>
+                    <td onclick="insert(9)">9</td>
+                    <td onclick="insert('/')">/</td>
+                </tr>
+                <tr>
+                    <td onclick="insert(4)">4</td>
+                    <td onclick="insert(5)">5</td>
+                    <td onclick="insert(6)">6</td>
+                    <td onclick="insert('*')">*</td>
+                </tr>
+                <tr>
+                    <td onclick="insert(1)">1</td>
+                    <td onclick="insert(2)">2</td>
+                    <td onclick="insert(3)">3</td>
+                    <td onclick="insert('-')">-</td>
+                </tr>
+                <tr>
+                    <td onclick="insert(0)">0</td>
+                    <td onclick="insert('.')">.</td>
+                    <td class="e" onclick="equal()">=</td>
+                    <td class="p" onclick="insert('+')">+</td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+
+</html>
