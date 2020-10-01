@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" type="text/css" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+        <div id="main">
+            <h1 id="title">Rock, Paper, Scissors!</h1>
+            <figcaption id="caption">Choose either Rock, Paper, or Scissors with the icons below. The computer will then auto generate a response. Try to win as many as possible and good luck! <i class="fas fa-hand-rock"></i> Beats <i class="fas fa-hand-scissors"></i>, <i class="fas fa-hand-scissors"></i> Beats <i class="fas fa-hand-paper"></i>, and  <i class="fas fa-hand-paper"></i> Beats <i class="fas fa-hand-rock"></i>!</figcaption>
+            <div id="playArea">
+                <i class="fas fa-hand-rock fa-10x" id="rock"></i>
+                <i class="fas fa-hand-paper fa-10x" id="paper"></i>
+                <i class="fas fa-hand-scissors fa-10x" id="scissors"></i>
+            </div>
+            <div id="display">
+                <h1 id="you">Your Selection: </h1>
+                <h1 id="computer">Computers Selection: </h1>
+            </div>
+            <div id="score">
+                <h1>Wins: <div id="winScore">0</div></h1>
+                <h1>Losses: <div id="loseScore">0</div></h1>
+                <h1>Ties: <div id="tieScore">0</div></h1>
+            </div>
+            <div id="reset">
+                <button id="button">Reset Score</button>
+            </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/e4609177e3.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
