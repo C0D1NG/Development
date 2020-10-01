@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Number Guessing Game</title>
+
+</head>
+
+<body>
+    <h1>Hi-Lo Guessing Game</h1>
+    <!-- form that has a textbox for the user to enter their guess and a button for the to submit/check their guess -->
+    <form id="guessingForm" name=getGuess onSubmit="return false;">
+        Enter your guess:
+        <input name=guess type=text size=3>
+        <input type=button value='Check Guess!' onClick='checkGuess()'>
+    </form>
+    <p id='hint'></p>
+
+</body>
+
+</html>
