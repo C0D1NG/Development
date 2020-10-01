@@ -1,0 +1,28 @@
+.container{
+    text-align: center;
+    
+}
+.calculator{
+    display: inline-block;
+    background-color: black;
+    text-align: center;
+    margin: auto;
+    width: 373px;
+    height: 360px;
+}
+button{
+    background-color: gainsboro;
+    font-size: 20px;
+    padding: 0px 11px;
+    height: 48px;
+    width: 85px;
+    margin:2px;
+}
+#screen{
+    margin:10px 4px;
+    width:350px;
+    height:50px;
+    font-size: 30px;
+    background-color: rgb(73, 69, 69);
+    color:rgb(121, 175, 121);
+}
