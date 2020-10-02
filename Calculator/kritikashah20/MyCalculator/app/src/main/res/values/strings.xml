@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MyCalculator</string>
+    <string name="number_2">Number 2</string>
+    <string name="multiplication">multiplication</string>
+    <string name="result">Result</string>
+    <string name="addition">addition</string>
+    <string name="subtract">subtract</string>
+    <string name="vit">VIT</string>
+    <string name="number_1">Number 1</string>
+    <string name="modulus" />
+</resources>
