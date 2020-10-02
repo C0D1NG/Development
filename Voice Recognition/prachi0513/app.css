@@ -1,0 +1,10 @@
+.jumbotron
+{
+    color :rgb(11, 11, 29);
+}
+.container mx-auto flex px-5 py-24 md:flex-row flex-col items-center
+{
+    color: darkolivegreen;
+    background color:blue;
+}
+
