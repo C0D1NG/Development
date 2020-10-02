@@ -1,0 +1,3 @@
+:root { --bg1: black; }
+body { width: 100%; height: 100%; position: relative; margin: 0 auto; padding: 0; text-align: center; background-color: var(--bg1); }
+#game { margin-top: calc(50vh - 288px); box-shadow: 0 0 2px var(--bg3); }
