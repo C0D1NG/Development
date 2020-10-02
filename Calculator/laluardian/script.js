@@ -67,7 +67,7 @@ inputButtons.forEach(inputButton => {
   }
 });
 
-// Reset All Values, Display
+// Reset All Values
 function resetAll() {
   firstValue = 0;
   operatorValue = '';
