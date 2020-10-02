@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+.title {
+  text-align: center;
+  padding: 1.2em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.style {
+  background: rgb(43, 8, 71);
+  height: 90vh;
+  padding: 10px;
+}
+
+.scoreboard {
+  position: relative;
+  border: 3px solid white;
+  width: 7em;
+  margin: 0 auto;
+  padding: 0.2em 0;
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+}
+.scoreboard:before {
+  content: "Player";
+  background: red;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.5em;
+  position: absolute;
+  right: 93%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.scoreboard:after {
+  content: "Computer";
+  background: red;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.5em;
+  position: absolute;
+  left: 90%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#result {
+  text-align: center;
+  padding: 1.3em 3em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.choices {
+  margin-top: 0.8em;
+  text-align: center;
+}
+.choices .choice {
+  display: inline-block;
+  border: 2px solid red;
+  border-radius: 100%;
+  background: transparent;
+  height: 6em;
+  width: 6em;
+  text-align: center;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.2rem;
+  line-height: 5.4em;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.choice + .choice {
+  margin-left: 3px;
+}
+.choice:hover {
+  color: yellowgreen;
+  background: rgb(85, 11, 85);
+}
+.h3 {
+  margin-top: 2em;
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
