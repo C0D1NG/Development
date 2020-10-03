@@ -1,0 +1,18 @@
+#container 
+{
+    text-align: center;
+    padding: auto;
+    margin: auto;
+}
+
+#answer 
+{
+    position: relative;
+    font-size: 128px;
+}
+
+#button 
+{
+    position: block;
+    margin-top: 8em;
+}
