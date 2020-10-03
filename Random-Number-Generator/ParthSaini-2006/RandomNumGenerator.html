@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+     <style>
+         body {
+    margin:0;
+    padding:0;
+    background-color:#161748;
+}
+div{
+     width:100%;
+     text-align:center ;
+     margin-top:20px;
+     font-weight:800;
+     font-size:33px;
+     color:white;
+}
+input{
+    padding:8px 4px 8px 4px;
+    font-size:16px;
+    border:none;
+    background-color:transparent ;
+    color:#fff;
+    border-bottom:1px solid #448aff;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
+    margin-bottom:30px;
+    outline:none;
+}
+input::-webkit-input-placeholder{
+    font-size:14px;
+}
+button{
+    display:block;
+    margin-left:auto;
+    margin-right:auto ;
+    
+    border-radius:4px;
+    padding:8px 26px;
+    background-color:#f95d9b;
+    color:white;
+    border:none;
+    transition:250ms ease;
+    box-shadow:none;
+    text-align:center;
+    margin-top:8px;
+    margin-bottom:30px;
+    user-select:none;
+    outline:none;
+}
+button:active{
+    transform:scale(0.9);
+}
+#number{
+    margin-left:auto;
+    margin-right:auto;
+}
+     </style>
+    </head>
+    <body>
+    <div>Random Number Generator</div>
+  <input type="number" placeholder="Enter the max value of the number" required/>
+<button onclick="generate()">Generate Number</button>
+        <div id="number"></div>
+        
+        
+        
+    <script>
+let output = document.querySelector("#number")
+    function generate(){
+    
+    let maxval = document.querySelector("input").value
+    let rand_num = Math.floor(Math.random() * maxval)
+    output.innerHTML = rand_num 
+    }
+    
+    </script>
+    </body>
+</html>
