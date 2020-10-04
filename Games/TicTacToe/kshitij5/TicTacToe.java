@@ -46,6 +46,7 @@ public class TicTacToe {
 
     }
 
+    /// Function which lets player play against computer
     static int ComputerOpponent() {
         Random rand = new Random();
         int bot_turn = 0;
@@ -94,6 +95,7 @@ public class TicTacToe {
         return 0;
     }
 
+    /// Function which lets two player play against each other
     static int HumanOpponent() {
         turn = "X";
         while (winner == null) {
@@ -127,6 +129,7 @@ public class TicTacToe {
         return 0;
     }
 
+    /// Function for showing Winner message
     static void dispWinner() {
         if (winner.equalsIgnoreCase("draw")) {
             System.out.println("It's a draw! Thanks for playing.");
@@ -135,6 +138,7 @@ public class TicTacToe {
         }
     }
 
+    /// Function checks for winner at each iteration
     static String checkWinner() {
         for (int a = 0; a < 8; a++) {
             String line = null;
@@ -180,12 +184,14 @@ public class TicTacToe {
         return null;
     }
 
+    /// Populates the initial empty board with slot numbers
     static void populateEmptyBoard() {
         for (int a = 0; a < 9; a++) {
             board[a] = String.valueOf(a + 1);
         }
     }
 
+    /// Prints boards for each input
     static void printBoard() {
         System.out.println(" ___________ ");
         System.out.println("| " + board[0] + " | " + board[1] + " | " + board[2] + " |");
