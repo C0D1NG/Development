@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 
-public class TicTacToedemo {
+public class TicTacToe {
     static Scanner in;
     static String[] board;
     static String turn;
