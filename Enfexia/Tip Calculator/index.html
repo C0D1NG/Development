@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body,
+        html {
+            background: white;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            top: 0;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-family: Roboto;
+        }
+
+        #container {
+            height: 35%;
+            width: 45%;
+            padding: 3% 5% 3% 3%;
+            background: #f7f7f7;
+            border-radius: 1vw;
+        }
+
+        .title {
+            font-weight: 700;
+            font-size: 3vw;
+        }
+
+        .question {
+            font-size: 1.5vw;
+            width: 100%;
+        }
+
+        #content {
+            margin: 2vw;
+        }
+
+        #calc,.info{
+            margin:2vw;
+            font-size: 1.5vw;
+        }
+
+        .answer {
+            width: 100%;
+            font-size: 1.3vw;
+            margin: 1vw;
+        }
+
+        button{
+            font-size: 1.5vw;
+            margin-top:2vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <span class="title">Tip Calculator</span>
+        <div id="content">
+            <span class="question">How much was your bill?<span>
+                    <input id="amount" class="answer" type="text" placeholder="Bill Amount">
+                    <span class="question">How was your service?</span>
+                    <select id="options" class="answer">
+                        <option disabled selected value="0">-- Choose an Option --</option>
+                        <option value="0.3">30%</option>
+                        <option value="0.2">20%</option>
+                        <option value="0.15">15%</option>
+                        <option value="0.1">10%</option>
+                        <option value="0.05">5%</option>
+                    </select>
+                    <span class="question">How many people are sharing the bill?</span>
+                    <input id="people" type="text" class="answer" placeholder="Number of People">
+                    <button type="button" id="calculate">Calculate!</button>
+        </div>
+        <div id="total">
+            <span class="info">Should pay:</span>
+            <span id="calc">0.00</span>
+        </div>
+    </div>
+
+    <script>
+        //Makes total part invisible
+        document.getElementById("total").style.display = "none";
+
+        //Eventlistener for click
+        document.getElementById("calculate").onclick = function () {
+            calculateTip();
+        };
+
+        function calculateTip() {
+            //Gets the values
+            let amount = document.getElementById("amount").value;
+            let option = document.getElementById("options").value;
+            let people = document.getElementById("people").value;
+
+            //Checks the values
+            if (amount === "" || option == 0) {
+                alert("Please enter values");
+                return;
+            }
+
+            //Calculates the tip
+            let total = (amount * option) / people;
+            //Rounds the total amount
+            total = Math.round(total * 100) / 100;
+            //Shows only the last two digits
+            total = total.toFixed(2);
+
+            //Displays the tip
+            document.getElementById("total").style.display = "block";
+
+            //Adds text if there are more than one people
+            if (!(people === "" || people <= 1)) {
+                total += " for each person"
+            }
+
+            //Appends the result
+            document.getElementById("calc").innerHTML = total;
+        }
+    </script>
+</body>
+
+</html>
