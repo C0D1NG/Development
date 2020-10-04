@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Clock and Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="master-container flex-wrapper">
+
+        <div class="flex-item">
+            <div id="timer-wrapper">
+                <div class="time-wrapper">
+                    <div class="time" id="hour">00</div>
+                    <span>h</span>
+                </div>
+                <div class="time-wrapper">
+                    <div class="time" id="minute">01</div>
+                    <span>m</span>
+                </div>
+                <div class="time-wrapper">
+                    <div class="time" id="second">20</div>
+                    <span>s</span>
+                </div>
+            </div>
+            <div id="progress-wrapper">
+                <progress value="0" max="100" id="time-bar"></progress>
+            </div>
+            <div id="notif-wrapper">
+                <span id="notif">Time Out!</span>
+            </div>
+        </div>
+
+        <div class="flex-item">
+            <form>
+                <input type="number" name="hour" id="input-hour" placeholder="hh">
+                <input type="number" name="minute" id="input-minute" placeholder="mm">
+                <input type="number" name="second" id="input-second" placeholder="ss">
+                <input type="button" value="Set" class="btn btn-primary" onclick="setTimer()">
+                <input type="reset" value="Reset" class="btn btn-tertiary">
+            </form>
+        </div>
+    </div>
+
+    <script src="clock-script.js"></script>
+</body>
+</html>
