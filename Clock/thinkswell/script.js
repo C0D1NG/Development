@@ -45,8 +45,6 @@ function doHours(hours) {
   }
   hoursPrt = hours.split("").map((el) => +el);
 
-  console.log(hoursPrt);
-
   Array.from(hrsOnes).forEach((el) => {
     el.style.transform = `translateY(${init + hoursPrt[0] * stepH}px)`;
   });
@@ -62,13 +60,10 @@ function doMinutes(minutes) {
   }
   minutesPrt = minutes.split("").map((el) => +el);
 
-  console.log(minutesPrt);
-
   Array.from(minOnes).forEach((el) => {
     el.style.transform = `translateY(${init + minutesPrt[0] * stepH}px)`;
   });
   Array.from(minTens).forEach((el) => {
-    console.log(minutesPrt[1]);
     el.style.transform = `translateY(${init + minutesPrt[1] * stepH}px)`;
   });
 }
@@ -80,43 +75,20 @@ function doSeconds(seconds) {
   }
   secondsPrt = seconds.split("").map((el) => +el);
 
-  console.log("secondsPrt", secondsPrt);
-
   Array.from(secOnes).forEach((el) => {
     el.style.transform = `translateY(${init + secondsPrt[0] * stepH}px)`;
   });
   Array.from(secTens).forEach((el) => {
-    console.log(secondsPrt[1]);
     el.style.transform = `translateY(${init + secondsPrt[1] * stepH}px)`;
   });
 }
 
 function doPeriod(isPM) {
-  console.log(isPM);
-
-  let move = isPM == 1 ? stepH - 15 : 0;
-
-  console.log({ move });
+  let move = isPM === 1 ? stepH - 15 : 0;
 
   Array.from(periods).forEach((el) => {
-    console.log(move);
     el.style.transform = `translateY(${init + move}px)`;
   });
-}
-
-function initialize() {
-  let [hours, minutes, seconds] = getDate();
-  let period = 0;
-  if (hours > 12) {
-    hours -= 12;
-    period = 1;
-  } else {
-    period = 1;
-  }
-  doHours(hours);
-  doMinutes(minutes);
-  doSeconds(seconds);
-  doPeriod(period);
 }
 
 let colorInd = 0;
@@ -125,8 +97,6 @@ const interval = setInterval(() => {
   let period = 0;
   if (hours > 12) {
     hours -= 12;
-    period = 1;
-  } else {
     period = 1;
   }
   doHours(hours);
