@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="row ">
+        <div class="col s12 m6 ">
+          <div class="card blue-grey darken-1 z-depth-5">
+            <div class="card-content white-text">
+              <span class="card-title">The Random Number Jènerator</span>
+              <p>My design is solely to generate a random number. Help fulfill my purpose by pressing the button below. Please.</p>
+            </div>
+            <div class="center-align card-action">
+                <button class=" waves-effect waves-light btn-large" type="button" value="Random Number!" onClick="document.getElementById('tb').innerHTML = RandomInt()"><i class="material-icons left">sentiment_very_satisfied
+                </i> generate me, please!</button>
+            </div>
+            <div class="card-action center-align ">i
+                <h5 class="white-text text-darken-5" id="tb" name="tb"></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</body>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="script.js"></script>
+</html>
