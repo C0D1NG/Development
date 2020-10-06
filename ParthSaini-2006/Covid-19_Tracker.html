@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Covid 19 tracker</title>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style>
+    body {
+    margin:0;
+    padding:0;
+    box-sizing:border-box ;
+}
+.con{
+    position:relative ;
+    display:flex;
+    align-items:center ;
+    justify-content:center ;
+    flex-direction:column;
+}
+header{
+    width:100%;
+    position:relative ;
+    top:0;
+    height:50px;
+    background-color:#ff66cc;
+    text-align:center ;
+    color:white;
+    line-height:50px;
+    font-size:30px;
+}
+.inputbox{
+    display:flex;
+    position:relative  ;
+    margin-top:40px;
+}
+.input{
+    height:35px;
+    width:220px;
+    outline:none;
+    text-indent:5px;    
+}
+.button{
+    height:41px;
+    width:43px;
+    background-color:#90ee90;
+    text-align:center ;
+    line-height:41px;
+    color:#fff;
+    position:relative ;   
+    left:-2px; 
+}
+.tit{
+    width:100%;
+    text-align:center ;
+    margin-top:20px;
+}
+.confirmbox{
+    height:200px;
+    background-color:#ffd700;
+    width:80%;
+    position:relative  ;
+    margin-top:40px;
+    color:#fff;
+    text-align:center ;
+    border-radius:5px;
+}
+.activebox{
+    height:200px;
+    background-color:#448aff;
+    width:80%;
+    position:relative   ;
+    margin-top:40px;
+    color:#fff;
+    text-align:center ;
+    border-radius:5px;
+}
+.deathbox{
+    height:200px;
+    background-color:#ed5650;
+    width:80%;
+    position:relative ;
+    margin-top:40px;
+    color:#fff;
+    text-align:center ;
+    border-radius:5px;
+}
+.recoverbox{
+    height:200px;
+    background-color:#77dd77;
+    width:80%;
+    position:relative  ;
+    margin-top:40px;
+    color:#fff;
+    text-align:center ;
+    border-radius:5px;
+    margin-bottom:20px;
+}
+.title{
+    font-size:30px;
+    margin-top:20px;
+}
+.count{
+    font-size:40px;
+    margin-top:55px;
+}
+</style>
+    </head>
+    <body>
+    <div class="con">
+    <header>
+        <div>Covid 19 Tracker</div>
+    </header>
+    
+        <div class="inputbox">
+   <input type="text" class="input" placeholder="Enter country name..."/>
+  <div class="button"><i class="fa fa-search"></i></div> 
+    </div>
+  <div class="tit"><div class="title">Country</div></div>
+  <div class="confirmbox">
+   <div class="title">Confirmed Cases</div>
+ 
+      <div class="count confirm">000000</div>
+  </div>
+  
+  <div class="activebox">
+   <div class="title">Active Cases</div>
+ 
+      <div class="count active">000000</div>
+  </div>
+  
+  <div class="deathbox">
+   <div class="title">Deaths</div>
+ 
+      <div class="count death">000000</div>
+  </div>
+  
+  <div class="recoverbox">
+   <div class="title">Recovered</div>
+ 
+      <div class="count recover">000000</div>
+  </div>
+        </div>
+        <script>
+var button = document.querySelector(".button");
+button.addEventListener('click',getdata);
+
+ async function getdata(){
+ 
+var input = document.querySelector(".input");
+var confirm = document.querySelector(".confirm");
+var active = document.querySelector(".active");
+var death = document.querySelector(".death");
+var recover = document.querySelector(".recover");
+var title = document.querySelector(".title")
+var country = input.value;
+if(country == ""){
+    alert("Pls input correct value")
+}
+try{
+const res = await fetch('https://covid19.mathdro.id/api/countries/'+ country)
+    const data = await res.json()
+    //console.log(JSON.stringify(data))
+    confirm.innerHTML = data.confirmed.value;
+    death.innerHTML = data.deaths.value;
+    recover.innerHTML = data.recovered.value;
+active.innerHTML = parseInt(data.confirmed.value-(data.recovered.value + data.deaths.value));
+title.innerHTML = input.value.toUpperCase();;
+input.value = "";
+}
+catch(e){
+    alert("Country not found")
+    input.value ="";
+}
+    //alert(data.error.message)
+    }
+        </script>
+   <script src="covid.js"></script>
+    </body>
+</html>
