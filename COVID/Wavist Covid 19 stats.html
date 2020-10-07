@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Covid-19 Statistics Viewer</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <style>
        
         html {
@@ -43,73 +44,12 @@
             margin-top: 30px;
             margin-left: -260px;
             border-radius: 7px;
-
+            text-align: center;
         }
 
-        .montform .feedback-input {
-            color: #3c3c3c;
-            font-family: Helvetica, Arial, sans-serif;
-            font-weight: 500;
-            font-size: 18px;
-            border-radius: 0;
-            line-height: 22px;
-            background-color: #fbfbfb;
-            padding: 13px 13px 13px 54px;
-            margin-bottom: 10px;
-            width: 100%;
-            box-sizing: border-box;
-            border: 3px solid rgba(0, 0, 0, 0);
+        p.text .form{
+            margin-top: 1rem;
         }
-
-        
-        .montform .feedback-input:focus {
-            background: #fff;
-            border: 3px solid #3498db;
-            color: #3498db;
-            outline: none;
-            padding: 13px 13px 13px 54px;
-        }
-
-        .montform textarea {
-            width: 100%;
-            height: 10vh;
-            line-height: 150%;
-            resize: vertical;
-        }
-
-        .montform input:hover,
-        .montform textarea:hover,
-        .montform input:focus,
-        .montform textarea:focus {
-            background-color: #e6e6e6;
-        }
-
-        .button-blue {
-            border-radius: 10px;
-            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-            float: left;
-            width: 100%;
-            border: #fbfbfb solid 4px;
-            cursor: pointer;
-            background-color: #7bc0ee;
-            color: rgb(18, 17, 19);
-            font-size: 24px;
-            padding-top: 22px;
-            padding-bottom: 22px;
-            transition: all 0.3s;
-            margin-top: -4px;
-            font-weight: 700;
-        }
-
-        .button-blue:hover {
-            background-color: rgba(0, 0, 0, 0);
-            color: #0493bd;
-        }
-
-        .montform .submit:hover {
-            color: #3498db;
-        }
-
 
         @media only screen and (max-width: 580px) {
             #form-div {
@@ -135,6 +75,7 @@
 
             <div id="form-div">
 
+
                 <form class="montform" method="post" name="myform">
                     
                     <h2 style="color: #10baee;">Covid-19 Statistics Checker</h2>
@@ -142,17 +83,17 @@
 
                     <p class="name">
 
-                        <input name="country" type="text" class="feedback-input" required placeholder="Enter Country Name"
+                        <input name="country" type="text" class="feedback-input form-control" required placeholder="Enter Country Name"
                             id="country" />
                     </p>
 
                     <p class="text">
-                        <textarea name="stats1" class="feedback-input"  id="stats1" placeholder="Confirmed:??"></textarea>
-                        <textarea name="stats2" class="feedback-input"  id="stats2" placeholder="Recovered:??"></textarea>
-                        <textarea name="stats4" class="feedback-input"  id="stats4" placeholder="Deaths:??"></textarea>
+                        <textarea name="stats1" class="feedback-input form-control form"  id="stats1" placeholder="Confirmed:??"></textarea>
+                        <textarea name="stats2" class="feedback-input form-control form"  id="stats2" placeholder="Recovered:??"></textarea>
+                        <textarea name="stats4" class="feedback-input form-control form"  id="stats4" placeholder="Deaths:??"></textarea>
                     </p>
                     <div class="submit">
-                        <input type="button" class="button-blue" value="Show Stats" onClick="getData()"></input>
+                        <input type="button" class="btn btn-primary" value="Show Stats" onClick="getData()"></input>
                     </div>
                 </form>
             </div>
@@ -179,6 +120,10 @@
           xhttp.send();
         }
         </script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 
 </html>
