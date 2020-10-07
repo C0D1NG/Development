@@ -1,0 +1,13 @@
+.calculator {
+  position: center;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 0px auto;
+  padding: 20px 20px 100px 20px;
+  top: calc(50% - 25px);
+  right: calc(50% - 50px);
+}
+.button {
+  color: red;
+}
