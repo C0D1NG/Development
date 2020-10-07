@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Random Number Generator by VectorXz | In contribution to Hacktoberfest 2020!</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mt-5">
+                <h1>Random Number Generator</h1>
+                <h4>by VectorXz</h4>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 p-5" style="background-color: #e87722; border-radius: 10px; color:white;">
+                <h5>I want to random number from</h5>
+                <input class="form-control" type="number" id="start" value="1" />
+                <h5>to</h5>
+                <input class="form-control" type="number" id="end" value="100" />
+                <br />
+                <button type="button" class="btn btn-secondary btn-lg btn-block" id="rand-btn">Give me a number!</button>
+                <div class="text-center">
+                    <h1 class="mt-5" id="result"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <div class="col-12 text-center">
+                Created by <a href="https://github.com/VectorXz" target="_blank">VectorXz</a> for contributing in Hacktoberfest 2020
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('rand-btn').addEventListener('click', function() {
+            let start = parseInt(document.getElementById('start').value)
+            let end = parseInt(document.getElementById('end').value)
+            if (isNaN(start) || isNaN(end) || start == "" || end == "") {
+                alert("Please input min-max number!")
+                return;
+            }
+            let res = Math.floor(Math.random() * (end - start + 1)) + start;
+            document.getElementById('result').innerText = "Your number is " + res;
+        })
+    </script>
+</body>
+
+</html>
