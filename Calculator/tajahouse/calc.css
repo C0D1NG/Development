@@ -1,0 +1,21 @@
+#calc-contain{
+  position: center;
+  max-width: 45%;
+  max-height: 45vh;
+  width: 600px;
+  border: 5px solid red;
+  border-radius: 85px;
+  /* margin: 0px auto; */
+  padding-left: 18%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  top: calc(50% - 25px);
+  right: calc(60% - 50px);
+  margin-left: 90px ;
+}
+.button{
+  background-color: red;
+  margin-right:10px ;
+  margin-top: 10px;
+}
+
