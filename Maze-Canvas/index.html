@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maze Game</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<!-- Header -->
+  <div class="header">
+    <h3>Score:</h3>
+    <div class="score">0</div>
+    <h3>Round:</h3>
+    <div class="round">0</div>
+    <h3>Timer:</h3>
+    <div class="timer">12000</div>
+    <button class="menu-btn">Menu</button>
+  </div>
+  
+  <!-- Menu -->
+  <div class="menu-container hidden">
+    <ul>
+      <li id="menu-new">New Game</li>
+      <li id="menu-how">How to play</li>
+      <li>something else</li>
+      <li>something else</li>
+    </ul>
+  </div>
+  
+  <!-- Ready Button -->
+  <button id="ready">Are you ready?</button>
+  
+  <!-- Winner message -->
+  <div class="winner hidden">
+    <h1>Congratulations, you solved the maze!</h1>
+  </div>
+  
+  <!-- Next game message -->
+  <div class="next-game hidden">
+    <h1>Ready for your next challenge?</h1>
+    <button class="button" id="next">Let's go!</button>
+  </div>
+  
+  <!-- Game over message -->
+  <div class="time-out hidden">
+    <h1>Game Over. You ran out of time!</h1>
+  </div>
+ 
+  <script src=./js/utils.js></script>
+  <script src=./js/text.js></script>
+  <script src="index.js"></script>
+</body>
+</html>

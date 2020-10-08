@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script defer src="app.js"></script>
+    <div class="heading">Made by Abhishek Bhaware</div>
+    <div class="calculator">
+      <div class="screen">
+        <div class="inner-screen" id="answer"></div>
+      </div>
+      <div class="numberplate">
+        <ul class="list">
+          <li class="cards"><button onclick="clearValue();">AC</button></li>
+          <li class="cards"><button onclick="back();">"D"</button></li>
+          <li class="cards"><button onclick="insertNum('%');">%</button></li>
+          <li class="cards last">
+            <button onclick="insertNum('/');">/</button>
+          </li>
+        </ul>
+        <ul class="list">
+          <li class="cards"><button onclick="insertNum(7);">7</button></li>
+          <li class="cards"><button onclick="insertNum(8);">8</button></li>
+          <li class="cards"><button onclick="insertNum(9);">9</button></li>
+          <li class="cards last">
+            <button onclick="insertNum(`*`);">*</button>
+          </li>
+        </ul>
+        <ul class="list">
+          <li class="cards"><button onclick="insertNum(4);">4</button></li>
+          <li class="cards"><button onclick="insertNum(5);">5</button></li>
+          <li class="cards"><button onclick="insertNum(6);">6</button></li>
+          <li class="cards last">
+            <button onclick="insertNum(`-`);">-</button>
+          </li>
+        </ul>
+        <ul class="list">
+          <li class="cards"><button onclick="insertNum(1);">1</button></li>
+          <li class="cards"><button onclick="insertNum(2);">2</button></li>
+          <li class="cards"><button onclick="insertNum(3);">3</button></li>
+          <li class="cards last"><button onclick="insertNum('+');">+</button></li>
+        </ul>
+        <ul class="list">
+          <li class="cards none"><button></button></li>
+          <li class="cards"><button" onclick="insertNum(0);">0</button></li>
+          <li class="cards"><button onclick="insertNum('.');">.</button></li>
+          <li class="cards last"><button onclick="finalResult();">=</button></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

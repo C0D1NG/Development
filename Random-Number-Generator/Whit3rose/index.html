@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Random Number Generator</title>
+      <script>
+        function generateNumber() {
+          document.getElementById("number").innerHTML = Math.random();
+        }
+      </script>
+   </head>
+
+   <body>
+     <p>Generate a random number by clicking on the button</p>
+     <button onclick="generateNumber()">Generate a random Number</button>
+     <p id="number"></p>
+   </body>
+
+</html>

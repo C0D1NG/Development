@@ -1,0 +1,32 @@
+header {
+    text-align: center;
+    margin-top: 50px;
+}
+header h1{
+    text-align: center;
+    margin: 0;
+}
+#container {
+    text-align: center;
+    margin-top: 50px;
+}
+#score .roundNumber {
+    display: block;
+}
+#score .playerScore,.computerScore{
+    display: inline;
+}
+.playerScore{
+    margin-right: 50px;
+}
+#printResult {
+    padding-top: 20px;
+    margin: auto;
+    border-radius: 10px;
+    
+    
+    }
+    
+button {
+    margin-top: 25px;
+}

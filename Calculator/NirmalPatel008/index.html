@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <h1>Javascript Calculator</h1>
+    <div class="calbody">
+      <form name="lcdform">
+        <input id="lcdu" name="lcdsu" type="text" value="" />
+        <input id="lcd" name="lcds" type="text" value="0" />
+      </form>
+      <div id="calbutton">
+        <button id="num1" onclick="numberOne();">1</button>
+        <button id="num2" onclick="numberTwo();">2</button>
+        <button id="num3" onclick="numberThree();">3</button>
+        <button id="operationplus" onclick="operationPlus();">+</button>
+        <button id="operationraistop" onclick="operationraistop();">^</button>
+        <button id="num4" onclick="numberFour();">4</button>
+        <button id="num5" onclick="numberFive();">5</button>
+        <button id="num6" onclick="numberSix();">6</button>
+        <button id="operationmult" onclick="operationMultiplication();">
+          *
+        </button>
+        <button id="operationsqrt" onclick="sqrots();">Sqrt()</button>
+        <button id="num7" onclick="numberSeven();">7</button>
+        <button id="num8" onclick="numberEight();">8</button>
+        <button id="num9" onclick="numberNine();">9</button>
+        <button id="operationminus" onclick="operationMinus();">-</button>
+        <button id="clr" onclick="clr();">C</button>
+        <button id="operationperc" onclick="operationPercentage();">%</button>
+        <button id="num0" onclick="numberZero();">0</button>
+        <button id="num00" onclick="numberButtonZero();">00</button>
+        <button id="operationdivid" onclick="operationDivide();">/</button>
+        <button id="sumbit" onclick="equalsTo();">=</button>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

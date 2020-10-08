@@ -28,6 +28,7 @@
 
   <body>
     <h1>Number guessing game</h1>
+    <p id="pname"></p>
 
     <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
 
@@ -44,7 +45,10 @@
     </div>
 
     <script>
-
+	var name=prompt("Enter your name to play");
+        alert("lets play the Game!!");
+        var username=document.getElementById("pname");
+        username.innerHTML=("Heyy "+name+",");
         let randomNumber = Math.floor(Math.random() * 100) + 1;
 
         const guesses = document.querySelector('.guesses');

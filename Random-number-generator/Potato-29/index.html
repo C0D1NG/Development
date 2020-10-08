@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Random number generator</title>
+    </head>
+    <body>
+        <p id="number"> </p>
+        <button name="btn1" id="btn" onclick="random();">Generate a number.</button>
+    </body>
+
+
+    <script>
+        function random(){
+
+            document.getElementById("number").innerHTML = Math.floor(Math.random() * 100);
+
+
+        }
+
+
+
+    </script>
+    
+    
+    
+    <style>
+        #number{
+            font-size: 70px;
+            
+        }
+
+        #btn{
+            width: 80;
+            height: 65;
+        }
+
+
+    </style>
+
+
+</html>

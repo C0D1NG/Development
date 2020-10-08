@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Number guessing game</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        background: rgb(58,180,76);
+        background: linear-gradient(90deg, rgba(58,180,76,1) 0%, rgba(76,165,181,1) 50%, rgba(235,69,252,1) 100%); 
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+
+      .resultSubmit{
+        left: 50%;
+        margin: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Random Number Generator</h1>
+
+    <p>The random number generated will be in the range 1 to the number you enter below</p>
+
+    <div class="form">
+      <label for="inputField">Maximum Number : </label>
+      <input type="text" id="inputField" class="inputField">
+    </div>
+    <break>
+    <input type="submit" value="Generate Random Number" class="resultSubmit">
+    <div class="resultParas">
+      <div>Your Random Number: </div>
+      <div class="result"></div>
+    </div>
+
+    <script>
+
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        const result = document.querySelector('.result');
+
+        const resultSubmit = document.querySelector('.resultSubmit');
+        const inputField = document.querySelector('.inputField');
+
+
+        inputField.focus();
+        
+        function checkGuess() {
+          let userGuess = Number(inputField.value);
+
+          result.textContent = Math.floor(Math.random()*userGuess) + 1;
+
+          resultSubmit.focus();
+        }
+
+        resultSubmit.addEventListener('click',checkGuess);
+
+
+    </script>
+  </body>
+</html>
