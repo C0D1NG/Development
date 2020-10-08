@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Number Guessing Game</title>
+
+    <script language=JavaScript>
+        function setRandomNumber() {
+            highNumber = getHighNumber();
+            lowNumber = 1;
+            answer = getRandomInt(lowNumber, highNumber);
+            document.getGuess.guess.value = '';
+        }
+
+        function getRandomInt(min, max) {
+            randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+            return randomNum;
+        }
+
+        function getHighNumber() {
+
+            var highNum = prompt('Please enter the maxmium number of the range to guess:');
+            if (isNaN(highNum)) {
+                getHighNumber();
+            }
+
+            return highNum;
+        }
+
+        function checkGuess() {
+            var convertedHighNum = +highNumber;
+            var convertedGuess = +document.getGuess.guess.value;
+            var convertedLowNum = +lowNumber;
+
+            var hintTag = document.getElementById('hint');
+            hintTag.style.color = 'red';
+
+            if (isNaN(convertedGuess)) {
+                hintTag.textContent = 'Please enter a numerical guess';
+            }
+
+            else if (convertedGuess > convertedHighNum) {
+                hintTag.textContent = 'Guess is out of range';
+            }
+            else if (convertedGuess > answer) {
+                highNumber = convertedGuess;
+                hintTag.textContent = 'Guess was too high, new range is ' + lowNumber + ' to ' + highNumber;
+            }
+            else if (convertedGuess < answer) {
+                lowNumber = convertedGuess;
+                hintTag.textContent = 'Too Low...... New range is ' + convertedGuess + ' to ' + highNumber;
+            }
+            else if (convertedGuess == answer) {
+                UserWon();
+                hintTag.style.color = 'green';
+                hintTag.textContent = 'Winner!';
+            }
+        }
+
+        function UserWon() {
+            var wonTitle = document.createElement('h1');
+            wonTitle.style.color = 'green';
+            wonTitle.textContent = "You guessed the number! Congratulations!";
+
+            var playAgainP = document.createElement('p');
+            playAgainP.textContent = 'Refresh the page to play again';
+
+            document.body.appendChild(wonTitle);
+            document.body.appendChild(playAgainP);
+            document.body.style.backgroundColor = 'lightblue';
+        }
+
+    </script>
+</head>
+
+<body onLoad='setRandomNumber()'>
+    <h1>Hi-Lo Guessing Game</h1>
+    <!-- form that has a textbox for the user to enter their guess and a button for the to submit/check their guess -->
+    <form id="guessingForm" name=getGuess onSubmit="return false;">
+        Enter your guess:
+        <input name=guess type=text size=3>
+        <input type=button value='Check Guess!' onClick='checkGuess()'>
+    </form>
+    <p id='hint'></p>
+
+</body>
+
+</html>

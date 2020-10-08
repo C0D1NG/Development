@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #fafafa;
+  color: #373737;
+  font-family: "Passion One", cursive;
+}
+
+.title {
+  margin: 20px 0;
+  font-size: 30px;
+}
+.main-content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.number {
+  padding: 30px;
+  font-weight: bold;
+  font-size: 150px;
+}
+.input-number {
+  width: 100px;
+  font-size: 40px;
+  padding: 20px 0px 0px 0px;
+  border: none;
+  border-bottom: 1px solid #373737;
+}
+.try-number {
+  font-size: 40px;
+  border: none;
+  cursor: pointer;
+}
+.try-number:hover {
+  text-shadow: 1px 1px 2px #373737;
+}
+.input-number:focus,
+.try-number:focus {
+  outline: none;
+}
+
+.tips {
+  margin: 20px;
+  font-size: 26px;
+}

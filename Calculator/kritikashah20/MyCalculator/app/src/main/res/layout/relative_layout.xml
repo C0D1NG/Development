@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/image"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="104dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="627dp"
+        android:gravity="center"
+        android:text="@string/vit"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/number1"
+        android:layout_width="412dp"
+        android:layout_height="81dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="510dp"
+        android:background="#74FFFFFF"
+        android:ems="10"
+        android:hint="@string/number_1"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="412dp"
+        android:layout_height="81dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="425dp"
+        android:background="#74FFFFFF"
+        android:ems="10"
+        android:hint="@string/number_2"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="199dp"
+        android:layout_height="61dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="440dp"
+        android:layout_marginEnd="218dp"
+        android:layout_marginBottom="222dp"
+        android:text="@string/addition" />
+
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="199dp"
+        android:layout_height="61dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="531dp"
+        android:layout_marginEnd="215dp"
+        android:layout_marginBottom="128dp"
+        android:text="@string/subtract" />
+
+    <Button
+        android:id="@+id/divide"
+        android:layout_width="199dp"
+        android:layout_height="61dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="201dp"
+        android:layout_marginTop="440dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="222dp"
+        android:text="divide" />
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="199dp"
+        android:layout_height="61dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="531dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="128dp"
+        android:text="@string/multiplication" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="81dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="317dp"
+        android:background="#74FFFFFF"
+        android:lineSpacingExtra="12sp"
+        android:text="@string/result"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/modulus"
+        android:layout_width="199dp"
+        android:layout_height="61dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="109dp"
+        android:layout_marginBottom="50dp"
+        android:text="MODULUS" />
+
+</RelativeLayout>
