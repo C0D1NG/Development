@@ -1,0 +1,23 @@
+{
+  "name": "Development",
+  "version": "1.0.0",
+  "description": "C0D1NG is an organisation that helps everyone to contribute on open source projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZachyDev/Development.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZachyDev/Development/issues"
+  },
+  "homepage": "https://github.com/ZachyDev/Development#readme",
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
+}
