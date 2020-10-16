@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+
+    <title>COVID-19 Tracker</title>
+</head>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container" id="jmbotron">
+            <h1 class="display-4">COVID-19 Tracker</h1>
+            <p class="lead">
+                <div class="row">
+                    <div class="col-md-7 pr-md-12 col-md-0" id="leadtxt">
+                        <span id="jumbolead">Let's track down some virus</span>
+                    </div>
+                    <div class="col-md-5 col-sm-12" id="btngrp">
+                        <a href="#lnk"><button type="button" class="btn btn-outline-danger">Other Links</button></a>
+                    </div>
+                </div>
+            </p>
+        </div>
+    </div>
+
+    <div class="container" id="drpdwnCont">
+        <select name="country" id="countrySel" class="mySelect">
+            <option value="" selected="selected">Worldwide</option>
+        </select>
+    </div>
+
+
+    <div class="container" id="graph">
+        <canvas id="barChart"></canvas>
+    </div>
+
+    <div class="container" id="dataContainer">
+        <table>
+            <tr class="dataContent">
+                <td>Total Cases </td>
+                <td>:</td>
+                <td class="num" id="confirmCs"></td>
+            </tr>
+            <tr class="dataContent">
+                <td>Total Recoveries </td>
+                <td>:</td>
+                <td class="num" id="recoveries"></td>
+            </tr>
+            <tr class="dataContent">
+                <td>Total Deaths </td>
+                <td>:</td>
+                <td class="num" id="deaths"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <hr>
+    </div>
+    <h2 id="lnk">SOME IMPORTANT LINKS</h2>
+    <div class="container" id="imgContainer">
+        <div class="row">
+            <div class="col-md-2 col-sm-0"></div>
+            <div class="col-md-4 col-sm-12 img-div">
+                <img id="ig1" src="images/G_white.jpg" alt="">
+                <br>
+                <a href="https://news.google.com/covid19/map?hl=en-IN&gl=IN&ceid=IN%3Aen"><button type="button"
+                        class="btn btn-outline-danger">Google</button></a>
+            </div>
+            <div class="col-md-4 col-sm-12 img-div">
+                <img src="images/WHO_white.jpg" alt="">
+                <br>
+                <a href="https://covid19.who.int/"><button type="button" class="btn btn-outline-danger">WHO</button></a>
+            </div>
+            <div class="col-md-2 col-sm-0"></div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script src="app.js"></script>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
