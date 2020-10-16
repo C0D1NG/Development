@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Covid-19 Statistics Viewer</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+       
+        html {
+            background: url(https://xvivo.com/app/uploads/2020/05/COVID19_1920x1200.jpg) no-repeat;
+            background-size: cover;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        }
+
+        #feedback-page {
+            text-align: center;
+        }
+
+        #form-main {
+            margin-top: auto;
+            width: 100%;
+            float: left;
+            padding-top: 0px;
+        }
+
+        #form-div {
+            background-color: rgba(72, 72, 72, .5);
+            padding-left: 35px;
+            padding-right: 35px;
+            padding-top: 12px;
+            padding-bottom: 50px;
+            width: 350px;
+            float: left;
+            left: 55%;
+            position: absolute;
+            margin-top: 30px;
+            margin-left: -260px;
+            border-radius: 7px;
+            text-align: center;
+        }
+
+        p.text .form{
+            margin-top: 1rem;
+        }
+
+        @media only screen and (max-width: 580px) {
+            #form-div {
+                left: 3%;
+                margin-right: 3%;
+                width: 88%;
+                margin-left: 0;
+                padding-left: 3%;
+                padding-right: 3%;
+                margin-top: 0%;
+                margin-bottom: 0%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <p id="demo"></p>
+    <div class="container">
+
+        <div id="form-main">
+
+            <div id="form-div">
+
+
+                <form class="montform" method="post" name="myform">
+                    
+                    <h2 style="color: #10baee;">Covid-19 Statistics Checker</h2>
+
+
+                    <p class="name">
+
+                        <input name="country" type="text" class="feedback-input form-control" required placeholder="Enter Country Name"
+                            id="country" />
+                    </p>
+
+                    <p class="text">
+                        <textarea name="stats1" class="feedback-input form-control form"  id="stats1" placeholder="Confirmed:??"></textarea>
+                        <textarea name="stats2" class="feedback-input form-control form"  id="stats2" placeholder="Recovered:??"></textarea>
+                        <textarea name="stats4" class="feedback-input form-control form"  id="stats4" placeholder="Deaths:??"></textarea>
+                    </p>
+                    <div class="submit">
+                        <input type="button" class="btn btn-primary" value="Show Stats" onClick="getData()"></input>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        document.getElementById("stats2").disabled = true;
+        document.getElementById("stats1").disabled = true;
+        document.getElementById("stats4").disabled = true;
+        
+        function getData() {
+          var country = document.getElementById('country').value;
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.myform.stats1.value='Confirmed Cases - ' + JSON.parse(this.responseText)['confirmed'].value
+                document.myform.stats2.value='Recovered - ' + JSON.parse(this.responseText)['recovered'].value
+               
+                document.myform.stats4.value='Death(s) - ' + JSON.parse(this.responseText)['deaths'].value
+            }
+          };
+          xhttp.open("GET", "https://covid19.mathdro.id/api/countries/" + country, true);
+          xhttp.send();
+        }
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>

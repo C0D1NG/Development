@@ -1,0 +1,11 @@
+*{background-color: whitesmoke; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 25px;}
+
+div.container{text-align: center; margin-top: 4rem;}
+
+.p{margin-top: 1rem;}
+
+.resultSubmit{background-color: red; color: white; border-radius: 20px;}
+
+.inputField {border-radius: 20px; width: 5rem;}
+
+.result{padding-top: 2rem; padding-bottom: 2rem; background-color: white; font-size: 30px;}

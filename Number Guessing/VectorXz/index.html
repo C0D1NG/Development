@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Number Guessing Game by VectorXz | In contribution to Hacktoberfest 2020!</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mt-5">
+                <h1>Number Guessing Game</h1>
+                <h4>by VectorXz</h4>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 p-5" style="background-color: #e87722; border-radius: 10px; color:white;">
+                <h5>From 1 to 100, I guess that magic number would be...</h5>
+                <input class="form-control" type="number" id="ans" placeholder="" />
+                <br />
+                <button type="button" class="btn btn-secondary btn-lg btn-block" id="check-btn">Check the answer!</button>
+                <div class="text-center">
+                    <h1 class="mt-5" id="result"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <div class="col-12 text-center">
+                Created by <a href="https://github.com/VectorXz" target="_blank">VectorXz</a> for contributing in Hacktoberfest 2020
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+            document.getElementById('ans').placeholder = "Let's try... " + (Math.floor(Math.random() * (100 - 1 + 1)) + 1);
+            let magicNumber = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+            console.log("Someone says that magic number is...." + magicNumber)
+            document.getElementById('check-btn').addEventListener('click', function() {
+                let ans = parseInt(document.getElementById('ans').value)
+                if (ans < magicNumber) {
+                    document.getElementById('result').innerText = "Oops! Your number is toooo low...";
+                } else if (ans > magicNumber) {
+                    document.getElementById('result').innerText = "Awww! Your number is toooo high...";
+                } else if (ans == magicNumber) {
+                    document.getElementById('result').innerText = "Amazing! You got this magic number!";
+                } else {
+                    document.getElementById('result').innerText = "Come on! Let's guess some number!";
+                }
+
+            })
+        });
+    </script>
+</body>
+
+</html>
