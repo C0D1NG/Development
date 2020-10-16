@@ -1,0 +1,93 @@
+* {
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 0px;
+  background-color: rgb(69, 69, 69);
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 700;
+  margin: 2%;
+}
+
+.calculator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+}
+.list {
+  list-style-type: none;
+  display: flex;
+}
+
+.cards {
+  text-align: center;
+  background-color: rgba(182, 182, 182, 0.768);
+  height: 100px;
+  width: 100px;
+  border: 1px solid grey;
+  margin: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: 0.5s ease;
+}
+
+.cards button {
+  font-size: 1.9rem;
+  background: none;
+  border: none;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  animation: 0.5s ease;
+}
+
+@keyframes example {
+  0% {
+    background-color: rgba(182, 182, 182, 0.768);
+    color: black;
+  }
+  100% {
+    background-color: black;
+    color: green;
+  }
+}
+
+.cards button:hover {
+  background-color: black;
+  color: white;
+}
+
+.none button {
+  cursor: not-allowed;
+}
+
+.last {
+  background-color: rgb(240, 114, 11);
+}
+
+.screen {
+  height: 500px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0%;
+  padding: 0%;
+  border: 10px solid rgb(106, 106, 106);
+}
+.inner-screen {
+  background-color: rgb(150, 25, 207);
+  height: 500px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.9rem;
+}

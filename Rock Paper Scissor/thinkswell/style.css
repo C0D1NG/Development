@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  color: #fff;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.app {
+  background: #0082ce;
+}
+
+.line {
+  width: 50%;
+  height: .4rem;
+  border-radius: .5rem;
+  background: #fff;
+  margin: .5rem;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.head {
+  font-size: 4.5rem;
+  padding: .5rem
+}
+
+.round {
+  font-size: 3rem;
+  text-decoration: underline;
+  padding: .5rem 0;
+}
+
+.info {
+  font-size: 1.4rem;
+}
+
+.player {
+  font-size: 2.7rem;
+  text-align: center;
+}
+
+.hand {
+  height: 130px;
+  /* background: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem;
+  margin: 1rem;
+}
+
+.hand__icon {
+  width: 110px;
+  height: 120px;
+  border-radius: 50%;
+  /* background: red; */
+  padding: .5rem
+}
+
+.hand__name {
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  font-size: 1.8rem;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  margin: 0 .5rem;
+  transition: all .2s;
+}
+
+.btn:hover {
+  background: #fff;
+  border: 2px solid #fff;
+  color: #0082ce;
+}
+
+.result {
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0082ceaf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
+
+.hidden {
+  display: none;
+}

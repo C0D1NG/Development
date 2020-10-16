@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>thinkswell - Rock, Paper, Scissors Game</title>
+</head>
+
+<body class="app">
+
+  <div class="wrapper">
+
+    <div class="head">Rock-Paper-Scissors Game</div>
+    <div class="info"> &#x1F6C8; This game consists of 7 rounds, Lets see who wins😉</div>
+    <div class="round">Round <span class="roundCount">1</span></div>
+    <div class="wrapOne computer">
+      <div class="player">Computer</div>
+      <div class="hand">
+        <svg class="hand__icon computer">
+          <use xlink:href="./sprite.svg#stone" />
+        </svg>
+        <div class="hand__name">
+          <span class="name computer hidden">Stone</span>!
+        </div>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="wrapOne human">
+      <div class="player">You</div>
+      <div class="hand">
+        <svg class="hand__icon human">
+          <use xlink:href="./sprite.svg#stone" />
+        </svg>
+        <div class="hand__name"><span class="name human hidden">Paper</span>!</div>
+      </div>
+      <div class="options">
+        <div class="btn option" data-do="stone">Stone</div>
+        <div class="btn option" data-do="paper">Paper</div>
+        <div class="btn option" data-do="scissors">Scissors</div>
+      </div>
+    </div>
+    <div class="wrapOne result hidden">
+      <span class="game">win</span>!!!
+    </div>
+  </div>
+
+  <div class="overlay hidden">
+    <div class="overlay__head msg">You Win!!!</div>
+    <div class="overlay__score">Your Score: <span class="hscore">0</span></div>
+    <div class="overlay__score">Computer's Score: <span class="cscore">0</span></div>
+    <div class="btn restart">Restart</div>
+  </div>
+</body>
+
+<script src="./script.js"></script>
+
+</html>

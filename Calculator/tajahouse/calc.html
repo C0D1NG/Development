@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="calc.css">
+    </head>
+    <body>
+        <div id='calc-contain'>
+  
+          <form name="calculator">
+            
+            <input type="text" name="txt" />
+            <br>
+            
+            <input class='button' type="button" value=" 1 " onclick="calculator.txt.value += '1'" />
+            <input class='button' type="button" value=" 2 " onclick="calculator.txt.value += '2'" />
+            <input class='button' type="button" value=" 3 " onclick="calculator.txt.value += '3'" />
+            <input class='button'type="button" value=" + " onclick="calculator.txt.value += '+'" />
+            <br/>
+            
+            <input class='button' type="button" value=" 4 " onclick="calculator.txt.value += '4'" />
+            <input class='button' type="button" value=" 5 " onclick="calculator.txt.value += '5'" />
+            <input class='button' type="button" value=" 6 " onclick="calculator.txt.value += '6'" />
+            <input class='button' type="button" value=" - " onclick="calculator.txt.value += '-'" />
+            </br>
+          
+            <input class='button' type="button" value=" 7 " onclick="calculator.txt.value += '7'" />
+            <input class='button' type="button" value=" 8 " onclick="calculator.txt.value += '8'" />
+            <input class='button' type="button" value=" 9 " onclick="calculator.txt.value += '9'" />
+            <input class='button' type="button" value=" x " onclick="calculator.txt.value += '*'" />
+            </br>
+        
+            <input class='button' type="button" value=" c " onclick="calculator.txt.value = ''" />
+            <input class='button' type="button" value=" 0 " onclick="calculator.txt.value += '0'" />
+            <input class='button' type="button" value=" = " onclick="calculator.txt.value = eval(calculator.txt.value)" />
+            <input class='button' type="button" value=" / " onclick="calculator.txt.value += '/'" />
+            </br>
+            </form>
+        </div>
+    </body>
+</html>
