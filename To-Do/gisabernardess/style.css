@@ -1,0 +1,167 @@
+:root {
+  --detail-color: #d10294;
+  --section-color: #616161;
+  --white-color: #f8f8ff;
+  --header-color: #444649;
+}
+
+body {
+  color: var(--white-color);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0px;
+  font-size: 8pt;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 70px 0 70px 0;
+  color: var(--section-color);
+  line-height: 11pt;
+  position: relative;
+}
+
+section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+section .flex-50-gt-sm {
+  display: block;
+}
+
+section:nth-of-type(2) {
+  height: calc(78.3vh + 53px);
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex.wrap {
+  flex-wrap: wrap;
+}
+
+.flex.row {
+  flex-direction: row;
+}
+
+.header {
+  font-size: 25pt;
+  position: relative;
+  color: var(--header-color);
+  position: relative;
+}
+
+.header-bar {
+  margin: 25px 0 60px 0;
+  width: 70px;
+  height: 4px;
+  background: var(--header-color);
+}
+
+.highlight {
+  color: var(--detail-color);
+}
+
+.label {
+  font-size: 14pt;
+  font-weight: 500;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 290px) {
+  .header {
+    font-size: 18pt;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 12pt;
+  }
+
+  section {
+    line-height: 18pt;
+    padding: 100px 0 130px 0;
+  }
+
+  section .container {
+    padding: 0 10px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .header {
+    font-size: 30pt;
+  }
+
+  .header-bar {
+    margin: 25px 0 50px 0;
+  }
+
+  .label {
+    font-size: 18pt;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .flex.row-gt-sm {
+    flex-direction: row;
+  }
+
+  .flex-50-gt-sm {
+    -webkit-flex: 1 1 50%;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    max-width: 50%;
+    max-height: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* ITEM */
+
+.within-list {
+  cursor: pointer;
+}
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+
+#listed:nth-child(odd):hover {
+  cursor: pointer;
+}
+
+/* FIXED LIST OF COLORS */
+#color-select {
+  display: flex;
+  padding: 5px 10px 0 0;
+}
+
+.color-box {
+  border: solid 1px #929292;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  margin-left: 5px;
+}
