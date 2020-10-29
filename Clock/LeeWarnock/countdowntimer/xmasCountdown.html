@@ -1,0 +1,27 @@
+<!--Make div to hold the clock-->
+<div id="clockdiv">
+    Days: <span class="days"></span><br>
+    Hours: <span class="hours"></span><br>
+    Minutes: <span class="minutes"></span><br>
+    Seconds: <span class="seconds"></span>
+</div>
+
+<!--Output clock function into the div-->
+function initializeClock(id, endtime) {
+  const clock = document.getElementById(id);
+  function updateClock(){
+  const t = getTimeRemaining(endtime);
+  clock.innerHTML = 'days: ' + t.days + '<br>' +
+                    'hours: '+ t.hours + '<br>' +
+                    'minutes: ' + t.minutes + '<br>' +
+                    'seconds: ' + t.seconds;
+  if (t.total <= 0) {
+    clearInterval(timeinterval);
+  }
+}
+
+updateClock(); // run function once at first to avoid delay
+var timeinterval = setInterval(updateClock,1000);
+}
+
+initializeClock('clockdiv', deadline);
