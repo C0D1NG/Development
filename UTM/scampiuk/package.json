@@ -1,0 +1,15 @@
+{
+  "name": "simple-utm-builder",
+  "version": "1.0.0",
+  "description": "A simple utm builder created for #Hacktoberfest",
+  "main": "index.js",
+  "author": "Chris Williams <chris@imnotplayinganymore.com>",
+  "license": "ISC",
+  "bin": {
+    "hello": "./bin/index.js"
+  },
+  "dependencies": {
+    "build-url": "^6.0.1",
+    "yargs": "^16.1.0"
+  }
+}
