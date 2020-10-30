@@ -1,0 +1,14 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 300px;
+}
+
+#time{
+  font-size: 60px;
+}
+
+#timer{
+  font-size: 30px;
+}
