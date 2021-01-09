@@ -1,0 +1,175 @@
+body{
+  background-image:url("../img/bg_page.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-form{
+  background: rgba(253, 251, 251, 0.25);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.27 );
+  backdrop-filter: blur( 1px );
+  -webkit-backdrop-filter: blur( 8px );
+  border-radius: 20px;
+  display: flex;
+  flex-direction:column;
+  padding:3em;
+  justify-content:center;
+  position: absolute; /* or absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);    
+}
+
+button{
+  transition: all 100ms;
+  text-align:center;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 6px;
+  border: none;
+  margin-top:10px;
+  outline: none;
+  font-size: 24px;
+  background: rgba( 255, 255, 255, 0.30 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 1px );
+  -webkit-backdrop-filter: blur( 4px );
+  font-family: 'Open Sans', sans-serif;
+  font-weight:bold;
+  background: -webkit-linear-gradient(10deg,#DD387B,#74D1E0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+button:hover{
+  color:#fff;
+  background: linear-gradient(10deg,rgba(231,66,124,0.4),rgba(107,206,226,0.4));
+  box-shadow: 0 2px 12px 0 rgba(231,66,124,0.4);
+  backdrop-filter: blur( 6px );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:rgba(231,66,124,0.4);
+}
+
+button:active{
+  transform:translatey(1.5px); 
+}
+
+.inp::placeholder{
+  background: -webkit-linear-gradient(10deg,#DD387B,#74D1E0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:bold;
+}
+
+.inp{
+  transition: all 100ms;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:600;
+  height: 45px;
+  margin:20px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  padding-left: 20px;
+}
+
+.inp:focus{
+  background: rgba( 255, 255, 255, 0.05 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 1.0px );
+  -webkit-backdrop-filter: blur( 1.0px );
+}
+
+@media only screen and (max-width: 670px) {
+  body {
+    background-color: lightblue;
+     background-size: auto;
+  }
+}
+
+@media only screen and (orientation:portrait){
+  .main-form{
+    margin:auto;
+    padding: 1.5em;
+  }
+}
+  
+  
+#background-container {
+  background-image: url("http://2.bp.blogspot.com/-iVdR7yu4Rcw/Wr-ZuWXvYEI/AAAAAAAApBE/uWGt8NCOdR8vlra5n11-XxUgnkPcJ6nEwCK4BGAYYCw/s1600/matthew-smith-5935-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+#form-container-1 {
+  position: relative;
+  align-self: center;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 40px 40px;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(0px);
+  overflow: hidden;
+  opacity: 0.2;
+  top: -700px;
+  animation: 1.5s formInAnim cubic-bezier(.03,1.08,.71,.95) forwards;
+  animation-delay: 1s;
+}
+
+
+@keyframes formInAnim {
+  0% {
+    opacity: .2;
+    top: -700px;
+    backdrop-filter: blur(0px);
+  }
+  
+  100% {
+    opacity: 1;
+    top: 0;
+    backdrop-filter: blur(15px) ;
+  }
+}
+
+
+#form-container-1 .form-block {
+  margin: 15px 0;
+}
+#form-container-1 .form-block label {
+  font-family: "Consolas", monospace;
+  display: block;
+  padding-left: 8px;
+  margin-bottom: 8px;
+  font-size: 0.85em;
+  color: #fff;
+  text-align: left;
+}
+#form-container-1 .form-block input {
+  font-size: 0.75em;
+  padding:  8px ;
+  border: none;
+  border: 0px solid rgba(0,0,0,0.5);
+  border-radius: 20px;
+  background-color: rgba(255,255,255,0.2);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  transition: 0.1s all ease-in-out;
+}
+
+#form-container-1 > form input:focus {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  outline: none;
+}
+
+  
+  
