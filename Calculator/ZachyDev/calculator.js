@@ -23,5 +23,5 @@ else {
     result = number1 / number2;
 }
 
-// display the result
+// display the output
 console.log(`${number1} ${operator} ${number2} = ${result}`);
