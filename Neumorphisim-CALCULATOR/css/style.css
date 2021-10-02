@@ -1,0 +1,23 @@
+@keyframes fadein {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+input {
+  text-align: right;
+  font-size: 3rem;
+  width: 78vw;
+}
+
+
+button {
+  width: 20vw;
+  height: 10vh;
+  margin: 0.25vmax;
+  font-size: 2rem;
+}
+
