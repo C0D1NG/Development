@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Geek</title>
+</head>
+<body>
+    <h1>Firestore</h1>
+    <form id="add-student" style="display:flex;flex-direction: row;">
+        <input type="text" name="firstname" placeholder="Student Name" style="padding: 10px"><br>
+        <input type="text" name="lastname" placeholder="Last Name"><br>
+        <input type="number" name="age" placeholder="Enter Age"><br>
+        <input type="submit" value="Add Student">
+    </form>
+    <ul id="student-list">
+        
+    </ul>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAzgM1xvMB-I3yM_KRW-hyeQA0FcU4pb8k",
+    authDomain: "student-ss.firebaseapp.com",
+    projectId: "student-ss",
+    storageBucket: "student-ss.appspot.com",
+    messagingSenderId: "84766823065",
+    appId: "1:84766823065:web:a4739161d89a8b8a281e08"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="index.js"></script>
+</body>
+</html>
