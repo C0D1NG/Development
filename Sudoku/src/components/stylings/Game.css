@@ -1,0 +1,44 @@
+.game {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.game h3 {
+	color: #fff;
+	font-size: 1.5rem;
+}
+.timer {
+	display: flex;
+}
+.stop-watch {
+	margin: 0px 10px;
+}
+.timer .pausebtn {
+	margin-top: -3px;
+}
+.su {
+	position: relative;
+}
+.play {
+	z-index: 99999;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #000;
+	background-color: #fff;
+	height: 100%;
+	width: 100%;
+}
+.play .fa-play-circle {
+	position: absolute;
+	font-size: 5rem;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+}
+
+.buttons button {
+	margin: 0px 20px;
+}
