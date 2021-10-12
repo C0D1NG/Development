@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    
+    <h2 class="jumbotron">
+      Firebase authetication
+    </h2>
+    <button class="btn btn-primary" onclick="googleLogin()">
+      Login with Google
+    </button>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAkl_tq5tpYflh79rc6KiYpbHtukjRAR6k",
+    authDomain: "fireside-series.firebaseapp.com",
+    projectId: "fireside-series",
+    storageBucket: "fireside-series.appspot.com",
+    messagingSenderId: "996607406238",
+    appId: "1:996607406238:web:3bca087f60487155c18b8f"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    <script src="app.js"></script>
+  </body>
+</html>
