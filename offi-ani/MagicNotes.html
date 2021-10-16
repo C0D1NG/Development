@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Magic Notes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input id="srchbtn" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 " id="srch" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container my-3">
+        <h1>Welcome to Magic notes</h1>
+        <div class="card ">
+            <div class="card-body">
+                <h5 class="card-title">Add your notes here:-</h5>
+                <label for="title"  style="margin:0rem;"><h4>Title:-</h4></label>
+                <textarea class="form-control my-2 " id="exampleFormControlTextarea1" rows="1" placeholder="Title of your note"></textarea>
+                <label for="Description" style="margin:0rem;"><h4>Description:-</h4></label>
+                <textarea class="form-control my-2 " id="exampleFormControlTextarea2" rows="3" placeholder="Description of your note"></textarea>
+                <button class="btn btn-primary my-3" id="addbtn">Add Notes</button>
+            </div>
+        </div>
+        <hr>
+        <h2>Your Notes</h2>
+        <hr>
+        <div class="row container-fluid" id="addnt">
+           
+        </div>  
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+<script>
+    console.log("magic notes 1");
+shownotes();
+let addbtn = document.getElementById("addbtn");
+addbtn.addEventListener("click", () => {
+    let txtA = document.getElementById("exampleFormControlTextarea2");
+    let note = txtA.value;
+    let txtT = document.getElementById("exampleFormControlTextarea1");
+    let noteT = txtT.value;
+    txtA.value = "";
+    txtT.value = "";
+    let value = localStorage.getItem("noteObjArr");
+    let noteObjArr = [], notes;
+    if (value != null) {
+
+        noteObjArr = JSON.parse(value);
+
+    }
+    let myObj = {
+        title: noteT,
+        text: note,
+        imp: "no"
+    }
+    noteObjArr.push(myObj);
+
+    notes = JSON.stringify(noteObjArr);
+    localStorage.setItem("noteObjArr", notes);
+    shownotes();
+});
+function shownotes() {
+    let value = localStorage.getItem("noteObjArr");
+
+    let noteObjArr, notes, html = "";
+    if (value == null) {
+        noteObjArr = [];
+        html = `<p>No notes to show.You can write and save your notes from the "add your notes" section</p>`;
+    }
+    else {
+        noteObjArr = JSON.parse(value);
+
+        if (noteObjArr.length == 0) {
+            html = `<p>No notes to show.You can write and save your notes from the "add your notes" section</p>`;
+        }
+        else {
+
+            noteObjArr.forEach((element, index) => {
+
+                if ((element.imp).includes("yes")) {
+                    html += `<div class="my-2 mx-2 card" style=" width: 18rem; border:2px solid red;">
+                    <div class="card-body srch-card">
+                        <h5 class="card-title">${element.title}</h5>
+                        <p class="card-text">${element.text}</p>
+                        <button onclick="deletion(${index})"  class="btn btn-primary">Delete Note</button>
+                        <button onclick="marking(${index})"  class="btn btn-primary">Unmark Note</button>
+                    </div>
+                </div>`;
+                }
+                else {
+                    html += `<div class="my-2 mx-2 card" style=" width: 18rem;">
+                    <div class="card-body srch-card">
+                        <h5 class="card-title">${element.title}</h5>
+                        <p class="card-text">${element.text}</p>
+                        <button onclick="deletion(${index})"  class="btn btn-primary">Delete Note</button>
+                        <button onclick="marking(${index})"  class="btn btn-primary">Mark as Imp</button>
+                    </div>
+                </div>`;
+                }
+            });
+        }
+    }
+
+
+    let addnt = document.getElementById("addnt");
+    addnt.innerHTML = html;
+
+}
+function marking(index) {
+    let value = localStorage.getItem("noteObjArr");
+
+    let noteObjArr = JSON.parse(value);
+    let myObj = noteObjArr[index];
+    if (myObj.imp.includes("yes"))
+        myObj.imp = "no";
+    else
+        myObj.imp = "yes";
+    let notes = JSON.stringify(noteObjArr);
+    localStorage.setItem("noteObjArr", notes);
+
+    shownotes();
+
+}
+
+
+function deletion(index) {
+
+    let cnfrm = confirm("Do you really want to delete this note?")
+
+    if (cnfrm) {
+        let value = localStorage.getItem("noteObjArr");
+
+        let noteObjArr = JSON.parse(value);
+
+        noteObjArr.splice(index, 1);
+
+        let notes = JSON.stringify(noteObjArr);
+
+        localStorage.setItem("noteObjArr", notes);
+        
+        alert("Your note is deleted");
+    }
+    else {
+        
+        alert("Your note is not deleted");
+
+    }
+    shownotes();
+   
+
+}
+
+let srchbtn = document.getElementById("srchbtn");
+srchbtn.addEventListener("input", () => {
+    let i = 0;
+    let coll = document.getElementsByClassName("srch-card");
+    let srchval = (document.getElementById("srchbtn").value);
+    Array.from(coll).forEach((element) => {
+        let txt = element.getElementsByTagName("p")[0].innerHTML;
+        let txtT = element.getElementsByTagName("h5")[0].innerHTML;
+        if (txt.includes(srchval) || txtT.includes(srchval)) {
+            element.parentNode.style.display = "block";
+        }
+        else {
+            i++;
+            element.parentNode.style.display = "none";
+        }
+    });
+    if (i == coll.length) {
+        let addnt = document.getElementById("addnt");
+        addnt.innerHTML = "<p>Oooooops NO RESULTS FOUND !!!!!</p>";
+    }
+    if (srchval == "") {
+        shownotes();
+    }
+
+});
+
+</script>
+</html>
