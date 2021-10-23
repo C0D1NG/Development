@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://unpkg.com/mvp.css")
+        link(rel="stylesheet", href="/public/css/style.css")
+        title Go Chat
+    body
+        header
+            div.container
+                form#headerForm
+                    img(src="/public/assets/logo.png", alt="Logo")#logo
+
+        main
+            div.container
+                div#welcome
+                    form
+                        h2 Select a Room Name
+                        input(placeholder="room name", required, type="text")
+                        button Enter room
+                div#call
+                    div#myStream
+                        div#video-container
+                            video#myFace(autoplay,playsinline, width="400", height="400", alt="You")
+                            video#peerFace(autoplay,playsinline, width="400", height="400", alt="Add Someone")
+                        div#controls
+                            button#mute Mute
+                            button#camera Turn Camera Off
+                            select#cameras
+
+
+        script(src="/socket.io/socket.io.js")
+        script(src="/public/js/app.js")

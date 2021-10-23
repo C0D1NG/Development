@@ -1,0 +1,4 @@
+{
+	"appService.defaultWebAppToDeploy": "/subscriptions/b769505f-0ea4-4dd1-9460-5e803a8af11b/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/go-chat-video",
+	"appService.deploySubpath": "."
+}
