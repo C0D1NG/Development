@@ -1,0 +1,68 @@
+body {
+	background: #200122; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#6f0000,
+		#200122
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#6f0000,
+		#200122
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color: white;
+}
+header {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#headerForm {
+	width: 550px;
+	display: flex;
+	justify-content: center;
+}
+#headerForm img {
+	width: 200px;
+	height: 80px;
+	margin-right: 20px;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#welcome,
+header form {
+	width: 400px;
+}
+
+#welcome form,
+header form {
+	color: black;
+	background: white;
+}
+
+#myFace {
+	margin-right: 30px;
+}
+
+#video-container video {
+	border-radius: 25px;
+	border: 2px solid white;
+}
+
+#controls {
+	width: 400px;
+}
+
+#mute,
+#camera {
+	margin-left: 35px;
+}
+
+#cameras {
+	margin: 0 auto;
+}
