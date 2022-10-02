@@ -1,6 +1,6 @@
 # Welcome to C0D1NG 🥳
 
-C0D1NG is an organization that helps everyone to contribute on open source projects.
+C0D1NG is an organization that helps everyone to contribute to open source projects.
 
 ---
 
@@ -18,7 +18,7 @@ C0D1NG is an organization that helps everyone to contribute on open source proje
 
 # 👉 Create a branch
 
-# 👉 Add your projects in a new directory, the name of directory should be your `USERNAME`
+# 👉 Add your projects to a new directory, the name of the directory should be your `USERNAME`
 
 # 👉 Add & commit
 
@@ -26,11 +26,11 @@ C0D1NG is an organization that helps everyone to contribute on open source proje
 
 # 👉 Compare & Submit a Pull Request
 
-We're happy to merge awesome portfolio to this repository!
+We're happy to merge an awesome portfolio into this repository!
 
 ---
 
-# Hurray! Now you are a part of open source community 🚀🚀🚀
+# Hurray! Now you are a part of the open source community 🚀🚀🚀
 
 ## Join our Community 👉🏻 [C0D1NG](https://t.me/C0D1NG)
 
