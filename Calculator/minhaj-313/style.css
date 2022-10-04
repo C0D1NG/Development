@@ -1,0 +1,104 @@
+* {
+    background-color: #ffe7f5;
+    margin: 15px;
+    padding: 0%;
+    box-sizing: border-box;
+    outline: none;
+    font-family: sans-serif;
+}
+
+.container {
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.calculator {
+    background-color: rgb(249, 192, 255);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.23),
+        inset -3px -3px 5px rgba(0, 0, 0, 0.289);
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+}
+
+input {
+    grid-column: span 4;
+    height: 78px;
+    width: 282px;
+    background-color: rgb(239, 248, 255);
+    box-shadow: inset -5px -5px 3px rgba(0, 0, 0, 0.174),
+        inset 5px 5px 3px rgba(0, 0, 0, 0.173);
+    border: none;
+    border-radius: 7px;
+    color: black;
+    font-size: 55px;
+    text-align: end;
+    margin: auto;
+    margin-top: 4opx;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+button {
+    height: 50px;
+    width: 60px;
+    background-color: rgba(255, 255, 255, 0.971);
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.442),
+        2px 2px 5px rgba(13, 13, 13, 0.474);
+    margin: 8px;
+    border-radius: 5px;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+button:hover {
+    height: 50px;
+    width: 60px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(1, 2, 0);
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.442),
+        2px 2px 5px rgba(13, 13, 13, 0.474);
+    margin: 8px;
+    border-radius: 5px;
+    border: none;
+    font-size: 30px;
+
+}
+
+.btn2 {
+    height: 50px;
+    width: 137px;
+    background-color: rgb(252, 255, 244);
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.581),
+        2px 2px 5px rgba(13, 13, 13, 0.585);
+    margin: 8px;
+    border-radius: 5px;
+    border: none;
+
+}
+
+.btn2:hover {
+    color: rgb(234, 1, 255);
+    background-color: rgb(0, 0, 0);
+    height: 50px;
+    width: 137px;
+    border-radius: 5px;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 50px;
+    border-radius: 5px;
+}
+
+h6 {
+    color: rgb(137, 137, 137);
+    text-align: center;
+    font-size: 30px;
+    border-radius: 5px;
+}
