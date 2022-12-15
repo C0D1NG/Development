@@ -17,7 +17,7 @@
 	},
 	"homepage": "https://github.com/Hardly-Human/Zoom-Clone-with-WebRTC#readme",
 	"dependencies": {
-		"express": "^4.17.1",
+		"express": "^4.17.3",
 		"localtunnel": "^2.0.1",
 		"pug": "^3.0.2",
 		"socket.io": "^4.2.0"
