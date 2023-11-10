@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/ZachyDev/Development#readme",
   "dependencies": {
-    "axios": "^0.20.0"
+    "axios": "^1.6.0"
   }
 }
